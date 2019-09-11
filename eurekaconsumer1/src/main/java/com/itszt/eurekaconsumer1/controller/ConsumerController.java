@@ -1,8 +1,8 @@
 package com.itszt.eurekaconsumer1.controller;
 
 import com.itszt.eurekaconsumer1.feigh.FeignServer;
-import com.itszt.eurekaserverprovider1.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
@@ -22,6 +22,15 @@ public class ConsumerController {
     @GetMapping("consumerUser2")
     public String consumerUser2() {
         return feignServer.getUser();
+    }
+
+    @Value("${newurl}")
+    private String url;
+
+    @GetMapping("consumerUser3")
+    public String consumerUser3() {
+        System.out.println("url = " + url);
+        return url;
     }
 
     @GetMapping("consumerUser")
