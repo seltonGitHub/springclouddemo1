@@ -5,6 +5,11 @@ spring:
   application:
     name: spring-cloud-config
 
+  rabbitmq:
+    host: 192.168.3.117
+    port: 5672
+    username: guest
+    password: guest
   cloud:
     config:
       server:
@@ -13,6 +18,11 @@ spring:
           password: 89l{:y3N{&ZS&s50ilXL[lz_i?LjgB
           username: seltonzyf@outlook.com
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
 eureka:
   client:
