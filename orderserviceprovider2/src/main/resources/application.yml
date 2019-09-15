@@ -1,0 +1,13 @@
+
+spring:
+  application:
+    name: spring-cloud-orderprovider1
+
+server:
+  port: 8101
+#eureka.client.register-with-eureka=false
+#eureka.client.fetch-registry=false
+
+eureka:
+  client:
+    service-url: {"defaultZone": "http://localhost:8000/eureka/"}
