@@ -6,6 +6,9 @@
 	<modules>
 		<module>eurekaserverprovicer1</module>
 		<module>eurekaconsumer1</module>
+        <module>basespringcloudemo1</module>
+		<module>orderserviceprovider2</module>
+		<module>userserviceprovider2</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
