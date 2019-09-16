@@ -9,6 +9,8 @@
         <module>basespringcloudemo1</module>
 		<module>orderserviceprovider2</module>
 		<module>userserviceprovider2</module>
+        <module>zipkindemo2</module>
+		<module>druiddemo2</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>

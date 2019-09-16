@@ -2,6 +2,11 @@
 spring:
   application:
     name: spring-cloud-orderprovider1
+  zipkin:
+    base-url: http://localhost:11000
+  sleuth:
+    sampler:
+      percentage: 1.0
 
 server:
   port: 8101

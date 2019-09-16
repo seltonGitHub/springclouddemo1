@@ -2,6 +2,8 @@
 spring:
   application:
     name: spring-cloud-userprovider1
+  zipkin:
+    base-url: http://localhost:11000
 
 server:
   port: 8102

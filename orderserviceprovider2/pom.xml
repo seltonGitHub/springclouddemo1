@@ -13,6 +13,10 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.itszt</groupId>
             <artifactId>basespringcloudemo1</artifactId>
             <version>0.0.1-SNAPSHOT</version>
