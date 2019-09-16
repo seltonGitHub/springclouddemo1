@@ -9,10 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>eurekaserverprovicer</artifactId>
+    <artifactId>eurekaserverconsumer</artifactId>
 
-
-
+    <dependencies>
+        <dependency>
+            <groupId>com.com.springc</groupId>
+            <artifactId>eurekaserverprovicer</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
     <build>
         <plugins>
             <plugin>

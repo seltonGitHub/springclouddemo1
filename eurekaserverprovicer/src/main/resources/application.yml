@@ -1,7 +1,7 @@
 
 spring:
   application:
-    name: spring-cloud-eureka-provicer
+    name: spring-cloud--provicer
 
 server:
   port: 8100
