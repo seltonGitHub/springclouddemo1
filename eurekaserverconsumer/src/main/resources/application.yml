@@ -3,6 +3,10 @@ spring:
   application:
     name: spring-cloud-eureka-consumer
 
+feign:
+  hystrix:
+    enabled: true
+
 server:
   port: 8200
 eureka:
