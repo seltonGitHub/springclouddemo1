@@ -1,5 +1,6 @@
 package com.springc.controller;
 
+import com.springc.feign.FeignServer;
 import com.springc.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
@@ -18,16 +19,24 @@ public class ConsumerController {
     @Autowired
     private RestTemplate restTemplate;
 
+    @Autowired
+    private FeignServer feignServer;
+
+    @GetMapping("consumerUser1")
+    public String consumerUser1(){
+
+        return feignServer.getUser();
+    }
+
     @GetMapping("consumerUser")
-    public User consumerUser(){
+    public String consumerUser(){
 
             String url="http://SPRING-CLOUD--PROVICER/user";
 
         HttpEntity<Object> objectHttpEntity = new HttpEntity<>("");
 
-        ResponseEntity<User> exchange = restTemplate.exchange(url, HttpMethod.GET, objectHttpEntity, User.class);
-
-        User body = exchange.getBody();
+        ResponseEntity<String> exchange = restTemplate.exchange(url, HttpMethod.GET, objectHttpEntity,String.class);
+        String body = exchange.getBody();
 
         return body;
 

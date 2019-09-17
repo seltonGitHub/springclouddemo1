@@ -12,7 +12,8 @@ public class UserController {
 
 
     @GetMapping("/user")
-    public User getUser(){
-        return new User("xiaoming");
+    public String getUser(){
+
+        return "xiaoming";
     }
 }
