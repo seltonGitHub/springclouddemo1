@@ -15,7 +15,6 @@ spring:
       server:
         git:
           uri: https://github.com/seltonGitHub/cloudconfig.git
-          password: 89l{:y3N{&ZS&s50ilXL[lz_i?LjgB
           username: seltonzyf@outlook.com
 
 management:
