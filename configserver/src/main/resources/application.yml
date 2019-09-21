@@ -10,9 +10,15 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/seltonGitHub/cloudconfig.git
-          password: 89l{:y3N{&ZS&s50ilXL[lz_i?LjgB
-          username: seltonzyf@outlook.com
+          uri: https://github.com/JZC-String/configserver.git
+          password: Jzc...321
+          username: JZC-String
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 eureka:
   client:
 #    register-with-eureka: false

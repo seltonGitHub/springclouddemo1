@@ -3,6 +3,7 @@ package com.springc.controller;
 import com.springc.feign.FeignServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +15,7 @@ import org.springframework.web.client.RestTemplate;
  * Created by JZC on 2019/9/16.
  */
 @RestController
+@RefreshScope
 public class ConsumerController {
 
     @Autowired
