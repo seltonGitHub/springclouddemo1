@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    config:
+      profile: test
+      name: java8-config
+      discovery:
+        enabled: true
+        service-id: SPRING-CLOUD-CONFIG
+eureka:
+  client:
+    service-url: {"defaultZone": "http://localhost:8000/eureka/"}
+
+

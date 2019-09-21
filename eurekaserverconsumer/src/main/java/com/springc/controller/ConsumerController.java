@@ -1,8 +1,8 @@
 package com.springc.controller;
 
 import com.springc.feign.FeignServer;
-import com.springc.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
@@ -26,6 +26,12 @@ public class ConsumerController {
     public String consumerUser1(){
 
         return feignServer.getUser();
+    }
+    @Value("${newurl}")
+    private String url;
+    @GetMapping("consumerUser2")
+    public String consumerUser2(){
+        return url;
     }
 
     @GetMapping("consumerUser")
