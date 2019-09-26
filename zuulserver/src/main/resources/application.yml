@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: spring-cloud--zuul
+
+server:
+  port: 8400
+
+zuul:
+  routes:
+    provider-api:
+#    在调用服务地址前面加个路径
+      path: /provider/**
+#      服务的提供者
+      serviceId: spring-cloud--provicer
+eureka:
+  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+    service-url: {"defaultZone": "http://localhost:8000/eureka/"}
